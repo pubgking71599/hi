@@ -66,7 +66,7 @@ def start(message):
            text='馃ぜ鈥嶁檪锔� Joined', callback_data='check'))
         msg_start = "*⛔ Must Join All Our Channel:\n➖➖➖➖➖➖➖➖➖➖\n➡️ @Genuines_airdrops\n➡️ @armylooterz2\n➡️ @AirdropNext_Level\n➡️ @cryptoHunterz9\n➡️ @Airdropo_o\n➡️ @airdropsuperme\n➡️@GeniusGiveway\n➖➖➖➖➖➖➖➖➖➖\n🅿️ayout Channel - @EFM_Payout\n"
         for i in CHANNELS:
-            msg_start += f"\n鉃★笍 {i}\n"
+            msg_start += f"\n"
         msg_start += "*"
         bot.send_message(user, msg_start,
                          parse_mode="Markdown", reply_markup=mar
