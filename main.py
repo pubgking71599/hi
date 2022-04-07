@@ -99,7 +99,8 @@ def start(message):
         markups = telebot.types.InlineKeyboardMarkup()
         markups.add(telebot.types.InlineKeyboardButton(
             text='Joined', callback_data='check'))
-        msg_start = "*To Use This Bot You Need To Join All Channels - \n*"
+        msg_start = "*🔎 Join Our All Channels:\n➖➖➖➖➖➖➖➖➖➖\n➡️ @Genuines_airdrops\n➡️ @armylooterz2\n➡️ @AirdropNext_Level\n➡️ @cryptoHunterz9\n➡️ @Airdropo_o\n➡️ @airdropsuperme\n➡️@GeniusGiveway\n➖➖➖➖➖➖➖➖➖➖\n🅿️ Join Payouts Channel\n⚡@EFM_Payout\n➖➖➖➖➖➖➖➖➖➖➖\n🛃 Before Using Bot, you have to start the below Bot👇👇👇! "
+      \n*"
         bot.send_message(user, msg_start,
                          parse_mode="Markdown", reply_markup=markups)
    except:
@@ -117,7 +118,7 @@ def query_handler(call):
             user_id = call.message.chat.id
             user = str(user_id)
             bot.answer_callback_query(
-                callback_query_id=call.id, text='鉁� You joined Now yu can earn money')
+                callback_query_id=call.id, text='💸 You joined Now yu can earn money')
             bot.delete_message(call.message.chat.id, call.message.message_id)
             if user not in data['refer']:
                 data['refer'][user] = True
