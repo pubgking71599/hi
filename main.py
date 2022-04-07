@@ -7,7 +7,7 @@ TOKEN = "EFM"
 
 BOT_TOKEN = "5289786962:AAGDTv0_BIJvAqUOKDhh6mix-_w3kHMCCas"
 PAYMENT_CHANNEL = "@PAYMENTCHANNELUSERNAME" #add payment channel here including the '@' sign
-OWNER_ID = 1194007250 #write owner's user id here.. get it from @MissRose_Bot by /id
+OWNER_ID = 868205118 #write owner's user id here.. get it from @MissRose_Bot by /id
 CHANNELS = ["@Genuines_airdrops", "@armylooterz2", "@AirdropNext_Level", "@Airdropo_o"] #add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
               #you can add as many channels here and also add the '@' sign before channel username
 Daily_bonus = 0.001 #Put daily bonus amount here!
@@ -28,10 +28,10 @@ bonus = {}
 
 def menu(id):
     keyboard = telebot.types.ReplyKeyboardMarkup(True)
-    keyboard.row('馃啍 Account')
-    keyboard.row('馃檶馃徎 Referrals', '馃巵 Bonus', '馃捀 Withdraw')
-    keyboard.row('鈿欙笍 Set Wallet', '馃搳Statistics')
-    bot.send_message(id, "*馃彙 Home*", parse_mode="Markdown",
+    keyboard.row('🆔 Account Balance')
+    keyboard.row('🙌🏻Referrals', '🎁 Daily Bonus', '➖ Withdraw')
+    keyboard.row('Set Wallet', '📊Statistics')
+    bot.send_message(id, "*Home*", parse_mode="Markdown",
                      reply_markup=keyboard)
 
 @bot.message_handler(commands=['start'])
@@ -166,7 +166,7 @@ def query_handler(call):
 @bot.message_handler(content_types=['text'])
 def send_text(message):
    try:
-    if message.text == '馃啍 Account':
+    if message.text == '🆔 Account Balance':
         data = json.load(open('users.json', 'r'))
         accmsg = '*馃懏 User : {}\n\n鈿欙笍 Wallet : *`{}`*\n\n馃捀 Balance : *`{}`* {}*'
         user_id = message.chat.id
@@ -184,7 +184,7 @@ def send_text(message):
         msg = accmsg.format(message.from_user.first_name,
                             wallet, balance, TOKEN)
         bot.send_message(message.chat.id, msg, parse_mode="Markdown")
-    if message.text == ' Referrals':
+    if message.text == '🙌🏻Referrals':
         data = json.load(open('users.json', 'r'))
         ref_msg = "*鈴笍 Total Invites : {} Users\n\n馃懃 Refferrals System\n\n1 Level:\n馃 Level掳1 - {} {}\n\n馃敆 Referral Link 猬囷笍\n{}*"
 
@@ -201,22 +201,22 @@ def send_text(message):
             bot_name, message.chat.id)
         msg = ref_msg.format(ref_count, Per_Refer, TOKEN, ref_link)
         bot.send_message(message.chat.id, msg, parse_mode="Markdown")
-    if message.text == "鈿欙笍 Set Wallet":
+    if message.text == "Set Wallet":
         user_id = message.chat.id
         user = str(user_id)
 
         keyboard = telebot.types.ReplyKeyboardMarkup(True)
-        keyboard.row('馃毇 Cancel')
+        keyboard.row('Cancel')
         send = bot.send_message(message.chat.id, "_鈿狅笍Send your TRX Wallet Address._",
                                 parse_mode="Markdown", reply_markup=keyboard)
         # Next message will call the name_handler function
         bot.register_next_step_handler(message, trx_address)
-    if message.text == "馃巵 Bonus":
+    if message.text == "🎁 Daily Bonus":
         user_id = message.chat.id
         user = str(user_id)
         cur_time = int((time.time()))
         data = json.load(open('users.json', 'r'))
-        #bot.send_message(user_id, "*馃巵 Bonus Button is Under Maintainance*", parse_mode="Markdown")
+        #bot.send_message(user_id, "* Bonus Button is Under Maintainance*", parse_mode="Markdown")
         if (user_id not in bonus.keys()) or (cur_time - bonus[user_id] > 60*60*24):
             data['balance'][(user)] += Daily_bonus
             bot.send_message(
@@ -228,7 +228,7 @@ def send_text(message):
                 message.chat.id, "鉂�*You can only take bonus once every 24 hours!*",parse_mode="markdown")
         return
 
-    if message.text == "馃搳Statistics":
+    if message.text == "📊Statistics":
         user_id = message.chat.id
         user = str(user_id)
         data = json.load(open('users.json', 'r'))
@@ -237,7 +237,7 @@ def send_text(message):
         bot.send_message(user_id, msg, parse_mode="Markdown")
         return
 
-    if message.text == "馃捀 Withdraw":
+    if message.text == "➖ Withdraw":
         user_id = message.chat.id
         user = str(user_id)
 
