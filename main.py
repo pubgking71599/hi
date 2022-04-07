@@ -99,6 +99,7 @@ def start(message):
         markups.add(telebot.types.InlineKeyboardButton(
             text='Joined', callback_data='check'))
         msg_start = "*⛔ Must Join All Our Channel\n============================\n💠@Genuines_airdrops\n💠 @armylooterz2\n💠 @AirdropNext_Level\n💠 @cryptoHunterz9\n💠 @Airdropo_o\n💠 @airdropsuperme\n💠@GeniusGiveway\n============================\n🅿️ayout Channel - @EFM_Payout \n*"     
+  
     bot.send_message(user, msg_start,
                          parse_mode="Markdown", reply_markup=markups)
    except:
@@ -155,7 +156,8 @@ def query_handler(call):
             markup.add(telebot.types.InlineKeyboardButton(
                 text='Joined', callback_data='check'))
             msg_start ="*⛔ Must Join All Our Channel\n============================\n💠@Genuines_airdrops\n💠 @armylooterz2\n💠 @AirdropNext_Level\n💠 @cryptoHunterz9\n💠 @Airdropo_o\n💠 @airdropsuperme\n💠@GeniusGiveway\n============================\n🅿️ayout Channel - @EFM_Payout \n*"     
-           bot.send_message(call.message.chat.id, msg_start,
+           
+      bot.send_message(call.message.chat.id, msg_start,
                              parse_mode="Markdown", reply_markup=markup)
    except:
         bot.send_message(call.message.chat.id, "This command having error pls wait for ficing the glitch by admin")
