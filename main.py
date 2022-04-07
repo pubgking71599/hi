@@ -273,7 +273,7 @@ def trx_address(message):
    try:
     if message.text == "馃毇 Cancel":
         return menu(message.chat.id)
-    if len(message.text) == 42:
+    if len(message.text) == 34:
         user_id = message.chat.id
         user = str(user_id)
         data = json.load(open('users.json', 'r'))
