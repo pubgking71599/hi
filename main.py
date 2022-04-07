@@ -186,8 +186,7 @@ def send_text(message):
         bot.send_message(message.chat.id, msg, parse_mode="Markdown")
     if message.text == '🙌🏻Referrals':
         data = json.load(open('users.json', 'r'))
-        ref_msg = "*👫Total Invites : {} Users\n\n1 Level:\n Level 1 - {} {}\n\n💹 You can earn 500000 EFM/ per  Successfull Refer
-Refer Amount When Credit Your Friends Join All Channnel🛒.\n\n🚀 Referral Link \n{}*"
+        ref_msg = "*👫Total Invites : {} Users\n\n💹 You can earn 500000 EFM/ per  Successfull Refer\nRefer Amount Credit When Your Friends Join All Channnel🛒.\n\n1 Level:\n Level 1 - {} {}n\n🚀 Referral Link \n{}*"
 
         bot_name = bot.get_me().username
         user_id = message.chat.id
