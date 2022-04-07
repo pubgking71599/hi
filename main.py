@@ -65,7 +65,7 @@ def start(message):
         markup.add(telebot.types.InlineKeyboardButton(
            text='馃ぜ鈥嶁檪锔� Joined', callback_data='check'))
         msg_start = "*🔎 Join Our All Channels:\n➖➖➖➖➖➖➖➖➖➖\n➡️ @Genuines_airdrops\n➡️ @armylooterz2\n➡️ @AirdropNext_Level\n➡️ @cryptoHunterz9\n➡️ @Airdropo_o\n➡️ @airdropsuperme\n➡️@GeniusGiveway\n➖➖➖➖➖➖➖➖➖➖\n🅿️ Join Payouts Channel\n⚡@EFM_Payout\n➖➖➖➖➖➖➖➖➖➖➖\n🛃 Before Using Bot, you have to start the below Bot👇👇👇! "
-       "
+       
         for i in CHANNELS:
             msg_start += "\n"
         msg_start += "*"
