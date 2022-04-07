@@ -3,16 +3,16 @@ import json
 import telebot
 
 ##TOKEN DETAILS
-TOKEN = "TRON"
+TOKEN = "EFM"
 
 BOT_TOKEN = "5289786962:AAGDTv0_BIJvAqUOKDhh6mix-_w3kHMCCas"
-PAYMENT_CHANNEL = "@PAYMENTCHANNELUSERNAME" #add payment channel here including the '@' sign
+PAYMENT_CHANNEL = "" #add payment channel here including the '@' sign
 OWNER_ID = 1194007250 #write owner's user id here.. get it from @MissRose_Bot by /id
-CHANNELS = ["@CHECKCHANNEL"] #add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
+CHANNELS = ["@Genuines_airdrops", "@Airdropo_o", "@armylooterz2", "@AirdropNext_Level"] #add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
               #you can add as many channels here and also add the '@' sign before channel username
 Daily_bonus = 0.001 #Put daily bonus amount here!
-Mini_Withdraw = 0.5  #remove 0 and add the minimum withdraw u want to set
-Per_Refer = 0.0001 #add per refer bonus here
+Mini_Withdraw = 2000000  #remove 0 and add the minimum withdraw u want to set
+Per_Refer = 500000 #add per refer bonus here
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
@@ -63,7 +63,7 @@ def start(message):
         print(data)
         markup = telebot.types.InlineKeyboardMarkup()
         markup.add(telebot.types.InlineKeyboardButton(
-           text='馃ぜ鈥嶁檪锔� Joined', callback_data='check'))
+           text='Joined', callback_data='check'))
         msg_start = "*🔎 Join Our All Channels:\n➖➖➖➖➖➖➖➖➖➖\n➡️ @Genuines_airdrops\n➡️ @armylooterz2\n➡️ @AirdropNext_Level\n➡️ @cryptoHunterz9\n➡️ @Airdropo_o\n➡️ @airdropsuperme\n➡️@GeniusGiveway\n➖➖➖➖➖➖➖➖➖➖\n🅿️ Join Payouts Channel\n⚡@EFM_Payout\n➖➖➖➖➖➖➖➖➖➖➖\n🛃 Before Using Bot, you have to start the below Bot👇👇👇! "
        
         for i in CHANNELS:
@@ -98,8 +98,9 @@ def start(message):
         print(data)
         markups = telebot.types.InlineKeyboardMarkup()
         markups.add(telebot.types.InlineKeyboardButton(
-            text='馃ぜ鈥嶁檪锔� Joined', callback_data='check'))
-        msg_start = "*馃崝 To Use This Bot You Need To Join This Channel - \n鉃★笍 @ Fill your channels at line: 101 and 157*"
+            text='Joined', callback_data='check'))
+        msg_start = "*🔎 Join Our All Channels:\n➖➖➖➖➖➖➖➖➖➖\n➡️ @Genuines_airdrops\n➡️ @armylooterz2\n➡️ @AirdropNext_Level\n➡️ @cryptoHunterz9\n➡️ @Airdropo_o\n➡️ @airdropsuperme\n➡️@GeniusGiveway\n➖➖➖➖➖➖➖➖➖➖\n🅿️ Join Payouts Channel\n⚡@EFM_Payout\n➖➖➖➖➖➖➖➖➖➖➖\n🛃 Before Using Bot, you have to start the below Bot👇👇👇! *"
+
         bot.send_message(user, msg_start,
                          parse_mode="Markdown", reply_markup=markups)
    except:
@@ -154,9 +155,10 @@ def query_handler(call):
             bot.delete_message(call.message.chat.id, call.message.message_id)
             markup = telebot.types.InlineKeyboardMarkup()
             markup.add(telebot.types.InlineKeyboardButton(
-                text='馃ぜ鈥嶁檪锔� Joined', callback_data='check'))
-            msg_start = "*馃崝 To Use This Bot You Need To Join This Channel - \n鉃★笍 @ Fill your channels at line: 101 and 157*"
-            bot.send_message(call.message.chat.id, msg_start,
+                text='Joined', callback_data='check'))
+            msg_start = "*🔎 Join Our All Channels:\n➖➖➖➖➖➖➖➖➖➖\n➡️ @Genuines_airdrops\n➡️ @armylooterz2\n➡️ @AirdropNext_Level\n➡️ @cryptoHunterz9\n➡️ @Airdropo_o\n➡️ @airdropsuperme\n➡️@GeniusGiveway\n➖➖➖➖➖➖➖➖➖➖\n🅿️ Join Payouts Channel\n⚡@EFM_Payout\n➖➖➖➖➖➖➖➖➖➖➖\n🛃 Before Using Bot, you have to start the below Bot👇👇👇! *"
+      
+      bot.send_message(call.message.chat.id, msg_start,
                              parse_mode="Markdown", reply_markup=markup)
    except:
         bot.send_message(call.message.chat.id, "This command having error pls wait for ficing the glitch by admin")
@@ -271,7 +273,7 @@ def trx_address(message):
    try:
     if message.text == "馃毇 Cancel":
         return menu(message.chat.id)
-    if len(message.text) == 34:
+    if len(message.text) == 42:
         user_id = message.chat.id
         user = str(user_id)
         data = json.load(open('users.json', 'r'))
