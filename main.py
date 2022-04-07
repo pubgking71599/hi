@@ -3,7 +3,7 @@ import json
 import telebot
 
 ##TOKEN DETAILS
-TOKEN = "TRON"
+TOKEN = "EFM"
 
 BOT_TOKEN = "5289786962:AAGDTv0_BIJvAqUOKDhh6mix-_w3kHMCCas"
 PAYMENT_CHANNEL = "@PAYMENTCHANNELUSERNAME" #add payment channel here including the '@' sign
@@ -11,8 +11,8 @@ OWNER_ID = 1194007250 #write owner's user id here.. get it from @MissRose_Bot by
 CHANNELS = ["@Genuines_airdrops", "@armylooterz2", "@AirdropNext_Level", "@Airdropo_o"] #add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
               #you can add as many channels here and also add the '@' sign before channel username
 Daily_bonus = 0.001 #Put daily bonus amount here!
-Mini_Withdraw = 0.5  #remove 0 and add the minimum withdraw u want to set
-Per_Refer = 0.0001 #add per refer bonus here
+Mini_Withdraw = 2000000  #remove 0 and add the minimum withdraw u want to set
+Per_Refer = 500000 #add per refer bonus here
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
@@ -63,7 +63,7 @@ def start(message):
         print(data)
         markup = telebot.types.InlineKeyboardMarkup()
         markup.add(telebot.types.InlineKeyboardButton(
-           text='馃ぜ鈥嶁檪锔� Joined', callback_data='check'))
+           text='Joined', callback_data='check'))
         msg_start = "*🔎 Join Our All Channels:\n➖➖➖➖➖➖➖➖➖➖\n➡️ @Genuines_airdrops\n➡️ @armylooterz2\n➡️ @AirdropNext_Level\n➡️ @cryptoHunterz9\n➡️ @Airdropo_o\n➡️ @airdropsuperme\n➡️@GeniusGiveway\n➖➖➖➖➖➖➖➖➖➖\n🅿️ Join Payouts Channel\n⚡@EFM_Payout\n➖➖➖➖➖➖➖➖➖➖➖\n🛃 Before Using Bot, you have to start the below Bot👇👇👇! "
        
         for i in CHANNELS:
@@ -98,8 +98,8 @@ def start(message):
         print(data)
         markups = telebot.types.InlineKeyboardMarkup()
         markups.add(telebot.types.InlineKeyboardButton(
-            text='馃ぜ鈥嶁檪锔� Joined', callback_data='check'))
-        msg_start = "*馃崝 To Use This Bot You Need To Join This Channel - \n鉃★笍 @ Fill your channels at line: 101 and 157*"
+            text='Joined', callback_data='check'))
+        msg_start = "*To Use This Bot You Need To Join All Channels - \n*"
         bot.send_message(user, msg_start,
                          parse_mode="Markdown", reply_markup=markups)
    except:
@@ -136,7 +136,7 @@ def query_handler(call):
                     data['balance'][ref] += Per_Refer
                     data['referred'][ref] += 1
                     bot.send_message(
-                        ref_id, f"*馃彠 New Referral on Level 1, You Got : +{Per_Refer} {TOKEN}*", parse_mode="Markdown")
+                        ref_id, f"*New Referral on Level 1, You Got : +{Per_Refer} {TOKEN}*", parse_mode="Markdown")
                     json.dump(data, open('users.json', 'w'))
                     return menu(call.message.chat.id)
 
@@ -150,12 +150,12 @@ def query_handler(call):
 
         else:
             bot.answer_callback_query(
-                callback_query_id=call.id, text='鉂� You not Joined')
+                callback_query_id=call.id, text=' You not Joined')
             bot.delete_message(call.message.chat.id, call.message.message_id)
             markup = telebot.types.InlineKeyboardMarkup()
             markup.add(telebot.types.InlineKeyboardButton(
-                text='馃ぜ鈥嶁檪锔� Joined', callback_data='check'))
-            msg_start = "*馃崝 To Use This Bot You Need To Join This Channel - \n鉃★笍 @ Fill your channels at line: 101 and 157*"
+                text='Joined', callback_data='check'))
+            msg_start = "*To Use This Bot You Need To Join All Channels \start - \n*"
             bot.send_message(call.message.chat.id, msg_start,
                              parse_mode="Markdown", reply_markup=markup)
    except:
@@ -184,7 +184,7 @@ def send_text(message):
         msg = accmsg.format(message.from_user.first_name,
                             wallet, balance, TOKEN)
         bot.send_message(message.chat.id, msg, parse_mode="Markdown")
-    if message.text == '馃檶馃徎 Referrals':
+    if message.text == ' Referrals':
         data = json.load(open('users.json', 'r'))
         ref_msg = "*鈴笍 Total Invites : {} Users\n\n馃懃 Refferrals System\n\n1 Level:\n馃 Level掳1 - {} {}\n\n馃敆 Referral Link 猬囷笍\n{}*"
 
