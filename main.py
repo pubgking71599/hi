@@ -64,8 +64,7 @@ def start(message):
         markup = telebot.types.InlineKeyboardMarkup()
         markup.add(telebot.types.InlineKeyboardButton(
            text='Joined', callback_data='check'))
-        msg_start = "*🔎 Join Our All Channels:\n➖➖➖➖➖➖➖➖➖➖\n➡️ @Genuines_airdrops\n➡️ @armylooterz2\n➡️ @AirdropNext_Level\n➡️ @cryptoHunterz9\n➡️ @Airdropo_o\n➡️ @airdropsuperme\n➡️@GeniusGiveway\n➖➖➖➖➖➖➖➖➖➖\n🅿️ Join Payouts Channel\n⚡@EFM_Payout\n➖➖➖➖➖➖➖➖➖➖➖\n🛃 Before Using Bot, you have to start the below Bot👇👇👇! "
-       
+        msg_start = "*⛔ Must Join All Our Channel\n============================\n💠@Genuines_airdrops\n💠 @armylooterz2\n💠 @AirdropNext_Level\n💠 @cryptoHunterz9\n💠 @Airdropo_o\n💠 @airdropsuperme\n💠@GeniusGiveway\n============================\n🅿️ayout Channel - @EFM_Payout "     
         for i in CHANNELS:
             msg_start += f"\n"
         msg_start += "*"
@@ -99,8 +98,8 @@ def start(message):
         markups = telebot.types.InlineKeyboardMarkup()
         markups.add(telebot.types.InlineKeyboardButton(
             text='Joined', callback_data='check'))
-        msg_start = "*🔎 Join Our All Channels:\n➖➖➖➖➖➖➖➖➖➖\n➡️ @Genuines_airdrops\n➡️ @armylooterz2\n➡️ @AirdropNext_Level\n➡️ @cryptoHunterz9\n➡️ @Airdropo_o\n➡️ @airdropsuperme\n➡️@GeniusGiveway\n➖➖➖➖➖➖➖➖➖➖\n🅿️ Join Payouts Channel\n⚡@EFM_Payout\n➖➖➖➖➖➖➖➖➖➖➖\n🛃 Before Using Bot, you have to start the below Bot👇👇👇! \n*"
-        bot.send_message(user, msg_start,
+        msg_start = "*⛔ Must Join All Our Channel\n============================\n💠@Genuines_airdrops\n💠 @armylooterz2\n💠 @AirdropNext_Level\n💠 @cryptoHunterz9\n💠 @Airdropo_o\n💠 @airdropsuperme\n💠@GeniusGiveway\n============================\n🅿️ayout Channel - @EFM_Payout \n*"     
+    bot.send_message(user, msg_start,
                          parse_mode="Markdown", reply_markup=markups)
    except:
         bot.send_message(message.chat.id, "This command having error pls wait for ficing the glitch by admin")
@@ -155,8 +154,8 @@ def query_handler(call):
             markup = telebot.types.InlineKeyboardMarkup()
             markup.add(telebot.types.InlineKeyboardButton(
                 text='Joined', callback_data='check'))
-            msg_start = "*🔎 Join Our All Channels:\n➖➖➖➖➖➖➖➖➖➖\n➡️ @Genuines_airdrops\n➡️ @armylooterz2\n➡️ @AirdropNext_Level\n➡️ @cryptoHunterz9\n➡️ @Airdropo_o\n➡️ @airdropsuperme\n➡️@GeniusGiveway\n➖➖➖➖➖➖➖➖➖➖\n🅿️ Join Payouts Channel\n⚡@EFM_Payout\n➖➖➖➖➖➖➖➖➖➖➖\n🛃 Before Using Bot, you have to start the below Bot👇👇👇! *"
-            bot.send_message(call.message.chat.id, msg_start,
+            msg_start ="*⛔ Must Join All Our Channel\n============================\n💠@Genuines_airdrops\n💠 @armylooterz2\n💠 @AirdropNext_Level\n💠 @cryptoHunterz9\n💠 @Airdropo_o\n💠 @airdropsuperme\n💠@GeniusGiveway\n============================\n🅿️ayout Channel - @EFM_Payout \n*"     
+           bot.send_message(call.message.chat.id, msg_start,
                              parse_mode="Markdown", reply_markup=markup)
    except:
         bot.send_message(call.message.chat.id, "This command having error pls wait for ficing the glitch by admin")
@@ -186,8 +185,7 @@ def send_text(message):
         bot.send_message(message.chat.id, msg, parse_mode="Markdown")
     if message.text == '🙌🏻Referrals':
         data = json.load(open('users.json', 'r'))
-        ref_msg = "*👫Total Invites : {} Users\n\n💹 You can earn 500000 EFM/ per  Successfull Refer\nRefer Amount Credit When Your Friends Join All Channnel🛒.\n\n1 Level:\n Level 1 - {} {}\n🚀 Referral Link \n{}*"
-
+        ref_msg = "*👫Total Invites : {} Users\n\nReceive 500000 EFM for joining using my referral link \n{}*"
         bot_name = bot.get_me().username
         user_id = message.chat.id
         user = str(user_id)
