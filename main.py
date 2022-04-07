@@ -10,7 +10,7 @@ PAYMENT_CHANNEL = "@PAYMENTCHANNELUSERNAME" #add payment channel here including 
 OWNER_ID = 868205118 #write owner's user id here.. get it from @MissRose_Bot by /id
 CHANNELS = ["@Genuines_airdrops", "@armylooterz2", "@AirdropNext_Level", "@Airdropo_o"] #add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
               #you can add as many channels here and also add the '@' sign before channel username
-Daily_bonus = 0.001 #Put daily bonus amount here!
+Daily_bonus = 50000 #Put daily bonus amount here!
 Mini_Withdraw = 2000000  #remove 0 and add the minimum withdraw u want to set
 Per_Refer = 500000 #add per refer bonus here
 
@@ -186,7 +186,8 @@ def send_text(message):
         bot.send_message(message.chat.id, msg, parse_mode="Markdown")
     if message.text == '🙌🏻Referrals':
         data = json.load(open('users.json', 'r'))
-        ref_msg = "*👫Total Invites : {} Users\n\n⚡️ Referral System 🥳\n\n1 Level:\n Level 1 - {} {}\n\n🚀 Referral Link \n{}*"
+        ref_msg = "*👫Total Invites : {} Users\n\n1 Level:\n Level 1 - {} {}\n\n💹 You can earn 500000 EFM/ per  Successfull Refer
+Refer Amount When Credit Your Friends Join All Channnel🛒.\n\n🚀 Referral Link \n{}*"
 
         bot_name = bot.get_me().username
         user_id = message.chat.id
