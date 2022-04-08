@@ -5,7 +5,7 @@ import telebot
 ##TOKEN DETAILS
 TOKEN = "TRON"
 
-BOT_TOKEN = "5289786962:AAGDTv0_BIJvAqUOKDhh6mix-_w3kHMCCas"
+BOT_TOKEN = "YOUR BOT TOKEN"
 PAYMENT_CHANNEL = "@PAYMENTCHANNELUSERNAME" #add payment channel here including the '@' sign
 OWNER_ID = 1194007250 #write owner's user id here.. get it from @MissRose_Bot by /id
 CHANNELS = ["@CHECKCHANNEL"] #add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
@@ -63,9 +63,9 @@ def start(message):
         print(data)
         markup = telebot.types.InlineKeyboardMarkup()
         markup.add(telebot.types.InlineKeyboardButton(
-           text='馃ぜ鈥嶁檪锔� Joined', callback_data='check'))
+           text='Joined', callback_data='check'))
         msg_start = "*🔎 Join Our All Channels:\n➖➖➖➖➖➖➖➖➖➖\n➡️ @Genuines_airdrops\n➡️ @armylooterz2\n➡️ @AirdropNext_Level\n➡️ @cryptoHunterz9\n➡️ @Airdropo_o\n➡️ @airdropsuperme\n➡️@GeniusGiveway\n➖➖➖➖➖➖➖➖➖➖\n🅿️ Join Payouts Channel\n⚡@EFM_Payout\n➖➖➖➖➖➖➖➖➖➖➖\n🛃 Before Using Bot, you have to start the below Bot👇👇👇! "
-         for i in CHANNELS:
+        for i in CHANNELS:
             msg_start += f"\n"
         msg_start += "*"
         bot.send_message(user, msg_start,
