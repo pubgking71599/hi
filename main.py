@@ -3,16 +3,16 @@ import json
 import telebot
 
 ##TOKEN DETAILS
-TOKEN = "TRON"
+TOKEN = "EFM"
 
 BOT_TOKEN = "5289786962:AAGDTv0_BIJvAqUOKDhh6mix-_w3kHMCCas"
-PAYMENT_CHANNEL = "@PAYMENTCHANNELUSERNAME" #add payment channel here including the '@' sign
-OWNER_ID = 1194007250 #write owner's user id here.. get it from @MissRose_Bot by /id
-CHANNELS = ["@CHECKCHANNEL"] #add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
+PAYMENT_CHANNEL = "@EFM_Payout" #add payment channel here including the '@' sign
+OWNER_ID = 868205118 #write owner's user id here.. get it from @MissRose_Bot by /id
+CHANNELS = ["@Genuines_airdrops", "@armylooterz2", "@AirdropNext_Level", "@Airdropo_o"] #add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
               #you can add as many channels here and also add the '@' sign before channel username
-Daily_bonus = 0.001 #Put daily bonus amount here!
-Mini_Withdraw = 0.5  #remove 0 and add the minimum withdraw u want to set
-Per_Refer = 0.0001 #add per refer bonus here
+Daily_bonus = 50000 #Put daily bonus amount here!
+Mini_Withdraw = 2000000  #remove 0 and add the minimum withdraw u want to set
+Per_Refer = 500000 #add per refer bonus here
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
@@ -28,10 +28,10 @@ bonus = {}
 
 def menu(id):
     keyboard = telebot.types.ReplyKeyboardMarkup(True)
-    keyboard.row('馃啍 Account')
-    keyboard.row('馃檶馃徎 Referrals', '馃巵 Bonus', '馃捀 Withdraw')
-    keyboard.row('鈿欙笍 Set Wallet', '馃搳Statistics')
-    bot.send_message(id, "*馃彙 Home*", parse_mode="Markdown",
+    keyboard.row('🆔 Account Balance')
+    keyboard.row('🙌🏻Referrals', '🎁 Daily Bonus', '➖ Withdraw')
+    keyboard.row('⚙️ Set Wallet', '📊Statistics')
+    bot.send_message(id, "*🏠Home*", parse_mode="Markdown",
                      reply_markup=keyboard)
 
 @bot.message_handler(commands=['start'])
