@@ -64,8 +64,8 @@ def start(message):
         markup = telebot.types.InlineKeyboardMarkup()
         markup.add(telebot.types.InlineKeyboardButton(
            text='Joined', callback_data='check'))
-        msg_start = "*⛔ Must Join All Our Channel\n============================\n💠@Genuines_airdrops\n💠 @armylooterz2\n💠 @AirdropNext_Level\n💠 @cryptoHunterz9\n💠 @Airdropo_o\n💠 @airdropsuperme\n💠@GeniusGiveway\n============================\n🅿️ayout Channel - @EFM_Payout"
-      for i in CHANNELS:
+        msg_start = "*🔎 Join Our All Channels:\n➖➖➖➖➖➖➖➖➖➖\n➡️ @Genuines_airdrops\n➡️ @armylooterz2\n➡️ @AirdropNext_Level\n➡️ @cryptoHunterz9\n➡️ @Airdropo_o\n➡️ @airdropsuperme\n➡️@GeniusGiveway\n➖➖➖➖➖➖➖➖➖➖\n🅿️ Join Payouts Channel\n⚡@EFM_Payout\n➖➖➖➖➖➖➖➖➖➖➖\n🛃 Before Using Bot, you have to start the below Bot👇👇👇! "
+        for i in CHANNELS:
             msg_start += f"\n"
         msg_start += "*"
         bot.send_message(user, msg_start,
@@ -97,8 +97,8 @@ def start(message):
         print(data)
         markups = telebot.types.InlineKeyboardMarkup()
         markups.add(telebot.types.InlineKeyboardButton(
-            text='馃ぜ鈥嶁檪锔� Joined', callback_data='check'))
-        msg_start = "*馃崝 To Use This Bot You Need To Join This Channel - \n鉃★笍 @ Fill your channels at line: 101 and 157*"
+            text='Joined', callback_data='check'))
+        msg_start = "*🔎 Join Our All Channels:\n➖➖➖➖➖➖➖➖➖➖\n➡️ @Genuines_airdrops\n➡️ @armylooterz2\n➡️ @AirdropNext_Level\n➡️ @cryptoHunterz9\n➡️ @Airdropo_o\n➡️ @airdropsuperme\n➡️@GeniusGiveway\n➖➖➖➖➖➖➖➖➖➖\n🅿️ Join Payouts Channel\n⚡@EFM_Payout\n➖➖➖➖➖➖➖➖➖➖➖\n🛃 Before Using Bot, you have to start the below Bot👇👇👇! *"
         bot.send_message(user, msg_start,
                          parse_mode="Markdown", reply_markup=markups)
    except:
@@ -153,8 +153,8 @@ def query_handler(call):
             bot.delete_message(call.message.chat.id, call.message.message_id)
             markup = telebot.types.InlineKeyboardMarkup()
             markup.add(telebot.types.InlineKeyboardButton(
-                text='馃ぜ鈥嶁檪锔� Joined', callback_data='check'))
-            msg_start = "*馃崝 To Use This Bot You Need To Join This Channel - \n鉃★笍 @ Fill your channels at line: 101 and 157*"
+                text='Joined', callback_data='check'))
+            msg_start = "*🔎 Join Our All Channels:\n➖➖➖➖➖➖➖➖➖➖\n➡️ @Genuines_airdrops\n➡️ @armylooterz2\n➡️ @AirdropNext_Level\n➡️ @cryptoHunterz9\n➡️ @Airdropo_o\n➡️ @airdropsuperme\n➡️@GeniusGiveway\n➖➖➖➖➖➖➖➖➖➖\n🅿️ Join Payouts Channel\n⚡@EFM_Payout\n➖➖➖➖➖➖➖➖➖➖➖\n🛃 Before Using Bot, you have to start the below Bot👇👇👇! *"
             bot.send_message(call.message.chat.id, msg_start,
                              parse_mode="Markdown", reply_markup=markup)
    except:
