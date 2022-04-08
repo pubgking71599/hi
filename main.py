@@ -327,7 +327,7 @@ def amo_with(message):
     markupp.add(telebot.types.InlineKeyboardButton(text='馃崁 BOT LINK', url=f'https://telegram.me/{bot_name}?start={OWNER_ID}'))
 
     send = bot.send_message(PAYMENT_CHANNEL,  "*💌 New Withdraw\n\n💸 Amount - "+str(amo)+f" {TOKEN}\n🙎 User - @"+message.from_user.username+"\n🏛️ Wallet* - `"+data['wallet'][user]+"`\n *User Referrals = "+str(
-        data['referred'][user])+"\n\n👑 Bot Link - @"+bot_name+"\n🙂 Please wait our owner will confrim it*", parse_mode="Markdown", disable_web_page_preview=True, reply_markup=markupp)
+        data['referred'][user])+"\n\n Bot Link - @"+bot_name+"\n🙂 Please wait our owner will confrim it*", parse_mode="Markdown", disable_web_page_preview=True, reply_markup=markupp)
    except:
         bot.send_message(message.chat.id, "This command having error pls wait for ficing the glitch by admin")
         bot.send_message(OWNER_ID, "Your bot got an error fix it fast!\n Error on command: "+message.text)
