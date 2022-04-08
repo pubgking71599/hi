@@ -185,7 +185,7 @@ def send_text(message):
         bot.send_message(message.chat.id, msg, parse_mode="Markdown")
     if message.text == '🙌🏻Referrals':
         data = json.load(open('users.json', 'r'))
-        ref_msg = "*👫 Total Invites : {} Users\n\n💹Receive {}{} EFM For Joining Using My Referral Link \n\n{}*"
+        ref_msg = "*👫 Total Invites : {} Users\n\n💹Receive {} {} For Joining Using My Referral Link \n\n{}*"
 
         bot_name = bot.get_me().username
         user_id = message.chat.id
