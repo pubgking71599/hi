@@ -63,7 +63,7 @@ def start(message):
         print(data)
         markup = telebot.types.InlineKeyboardMarkup()
         markup.add(telebot.types.InlineKeyboardButton(
-           text='Joined', callback_data='check'))
+           text='📌 Joined', callback_data='check'))
         msg_start = "*🔎 Join Our All Channels:\n➖➖➖➖➖➖➖➖➖➖\n➡️ @Genuines_airdrops\n➡️ @armylooterz2\n➡️ @AirdropNext_Level\n➡️ @cryptoHunterz9\n➡️ @Airdropo_o\n➡️ @airdropsuperme\n➡️@GeniusGiveway\n➖➖➖➖➖➖➖➖➖➖\n🅿️ Join Payouts Channel\n⚡@EFM_Payout\n➖➖➖➖➖➖➖➖➖➖➖\n🛃 Before Using Bot, you have to start the below Bot👇👇👇! "
         for i in CHANNELS:
             msg_start += f"\n"
@@ -206,7 +206,7 @@ def send_text(message):
 
         keyboard = telebot.types.ReplyKeyboardMarkup(True)
         keyboard.row('🚫 Cancel')
-        send = bot.send_message(message.chat.id, "_Send your TRX Wallet Address._",
+        send = bot.send_message(message.chat.id, "_Send your EFM Wallet Address._",
                                 parse_mode="Markdown", reply_markup=keyboard)
         # Next message will call the name_handler function
         bot.register_next_step_handler(message, trx_address)
@@ -270,13 +270,13 @@ def trx_address(message):
    try:
     if message.text == "🚫 Cancel":
         return menu(message.chat.id)
-    if len(message.text) == 34:
+    if len(message.text) == 42:
         user_id = message.chat.id
         user = str(user_id)
         data = json.load(open('users.json', 'r'))
         data['wallet'][user] = message.text
 
-        bot.send_message(message.chat.id, "*馃捁Your Trx wallet set to " +
+        bot.send_message(message.chat.id, "*💟Your Trx wallet set to " +
                          data['wallet'][user]+"*", parse_mode="Markdown")
         json.dump(data, open('users.json', 'w'))
         return menu(message.chat.id)
