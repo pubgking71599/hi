@@ -154,7 +154,7 @@ def query_handler(call):
             markup = telebot.types.InlineKeyboardMarkup()
             markup.add(telebot.types.InlineKeyboardButton(
                 text='📌 Joined', callback_data='check'))
-            msg_start = "*🔎 Join Our All Channels:\n➖➖➖➖➖➖➖➖➖➖\n➡️ @Genuines_airdrops\n➡️ @armylooterz2\n➡️ @AirdropNext_Level\n➡️ @cryptoHunterz9\n➡️ @Airdropo_o\n➡️ @airdropsuperme\n➡️@GeniusGiveway\n➖➖➖➖➖➖➖➖➖➖\n🅿️ Join Payouts Channel\n⚡@EFM_Payout\n➖➖➖➖➖➖➖➖➖➖➖\n🛃 Before Using Bot, you have to start the below Bot👇👇👇! *"
+            msg_start = "*⛔ Must Join All Our Channel\n============================\n💠@Genuines_airdrops\n💠 @armylooterz2\n💠 @AirdropNext_Level\n💠 @cryptoHunterz9\n💠 @Airdropo_o\n💠 @airdropsuperme\n💠@GeniusGiveway\n============================\n🅿️ayout Channel - @EFM_Payout*"
             bot.send_message(call.message.chat.id, msg_start,
                              parse_mode="Markdown", reply_markup=markup)
    except:
@@ -282,7 +282,7 @@ def trx_address(message):
         return menu(message.chat.id)
     else:
         bot.send_message(
-            message.chat.id, "*❗It's Not a Valid Trx Address!*", parse_mode="Markdown")
+            message.chat.id, "*❗It's Not a Valid EFM Address!*", parse_mode="Markdown")
         return menu(message.chat.id)
    except:
         bot.send_message(message.chat.id, "This command having error pls wait for ficing the glitch by admin")
@@ -324,7 +324,7 @@ def amo_with(message):
     bot.send_message(user_id, "*💌 Withdraw is request to our owner automatically\n\n⚡ Payment Channel :- "+PAYMENT_CHANNEL +"*", parse_mode="Markdown")
 
     markupp = telebot.types.InlineKeyboardMarkup()
-    markupp.add(telebot.types.InlineKeyboardButton(text='馃崁 BOT LINK', url=f'https://telegram.me/{bot_name}?start={OWNER_ID}'))
+    markupp.add(telebot.types.InlineKeyboardButton(text='🌐 BOT LINK 🌐', url=f'https://telegram.me/{bot_name}?start={OWNER_ID}'))
 
     send = bot.send_message(PAYMENT_CHANNEL,  "*💌 New Withdraw\n\n💸 Amount - "+str(amo)+f" {TOKEN}\n🙎 User - @"+message.from_user.username+"\n🏛️ Wallet* - `"+data['wallet'][user]+"`\n *User Referrals = "+str(
         data['referred'][user])+"\n\n Bot Link - @"+bot_name+"\n🙂 Please wait our owner will confrim it*", parse_mode="Markdown", disable_web_page_preview=True, reply_markup=markupp)
