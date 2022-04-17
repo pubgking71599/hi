@@ -3,9 +3,9 @@ import json
 import telebot
 
 ##TOKEN DETAILS
-TOKEN = "EFM"
+TOKEN = "SPG"
 
-BOT_TOKEN = "5289786962:AAGDTv0_BIJvAqUOKDhh6mix-_w3kHMCCas"
+BOT_TOKEN = "5361516597:AAFVoH-XSoIxRuOJ_uRFnvNbRNlK0IdNt7o"
 PAYMENT_CHANNEL = "@EFM_Payout" #add payment channel here including the '@' sign
 OWNER_ID = 868205118 #write owner's user id here.. get it from @MissRose_Bot by /id
 CHANNELS = ["@Genuines_airdrops", "@armylooterz2", "@AirdropNext_Level", "@Airdropo_o"] #add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
@@ -64,7 +64,7 @@ def start(message):
         markup = telebot.types.InlineKeyboardMarkup()
         markup.add(telebot.types.InlineKeyboardButton(
            text='📌 Joined', callback_data='check'))
-        msg_start = "*⛔ Must Join All Our Channel\n============================\n💠@Genuines_airdrops\n💠 @armylooterz2\n💠 @AirdropNext_Level\n💠 @cryptoHunterz9\n💠 @Airdropo_o\n💠 @airdropsuperme\n💠@GeniusGiveway\n============================\n🅿️ayout Channel - @EFM_Payout"
+        msg_start = "*⛔ Must Join All Our Channel\n============================\n💠@Genuines_airdrops\n💠 @armylooterz2\n💠 @AirdropNext_Level\n💠 @cryptoHunterz9\n💠 @Airdropo_o\n💠 @airdropsuperme\n💠@GeniusGiveway\n============================\n⛱Payment Channel -\n============================\n🔰 [Subscribe Our YouTube channel](https://youtube.com/channel/UCWV3bsFlpBm7oqsbB04wTGQ)\n============================"
         for i in CHANNELS:
             msg_start += f"\n"
         msg_start += "*"
