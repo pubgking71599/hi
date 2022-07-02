@@ -3,16 +3,16 @@ import json
 import telebot
 
 ##TOKEN DETAILS
-TOKEN = "SPG"
+TOKEN = "DGB"
 
-BOT_TOKEN = "5361516597:AAFVoH-XSoIxRuOJ_uRFnvNbRNlK0IdNt7o"
-PAYMENT_CHANNEL = "@EFM_Payout" #add payment channel here including the '@' sign
+BOT_TOKEN = "5512364402:AAEtLyHrwUxPDy9xGx80MsuGOZxpvOeyB3g"
+PAYMENT_CHANNEL = "@bot_payon" #add payment channel here including the '@' sign
 OWNER_ID = 868205118 #write owner's user id here.. get it from @MissRose_Bot by /id
-CHANNELS = ["@Genuines_airdrops", "@armylooterz2", "@AirdropNext_Level", "@Airdropo_o"] #add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
+CHANNELS = [ "@meta_fireofficial" ] #add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
               #you can add as many channels here and also add the '@' sign before channel username
-Daily_bonus = 50000 #Put daily bonus amount here!
-Mini_Withdraw = 2000000  #remove 0 and add the minimum withdraw u want to set
-Per_Refer = 500000 #add per refer bonus here
+Daily_bonus = 2 #Put daily bonus amount here!
+Mini_Withdraw = 20  #remove 0 and add the minimum withdraw u want to set
+Per_Refer = 5 #add per refer bonus here
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
@@ -64,7 +64,7 @@ def start(message):
         markup = telebot.types.InlineKeyboardMarkup()
         markup.add(telebot.types.InlineKeyboardButton(
            text='📌 Joined', callback_data='check'))
-        msg_start = "*⛔ Must Join All Our Channel\n============================\n💠@Genuines_airdrops\n💠 @armylooterz2\n💠 @AirdropNext_Level\n💠 @cryptoHunterz9\n💠 @Airdropo_o\n💠 @airdropsuperme\n💠@GeniusGiveway\n============================\n⛱Payment Channel -\n============================\n🔰 [Subscribe Our YouTube channel](https://youtube.com/channel/UCWV3bsFlpBm7oqsbB04wTGQ)\n============================"
+        msg_start = "*⛔ Must Join All Our Channel\n============================\n💠 @flex_airdrop\n💠 @flex_airdrop_discussion\n💠 @Meta_fireofficial\n💠 @Bsc_Cryptos\n💠 @Crazy_Shirsh\n💠 @airdropo_o\n💠 @prolooteress\n💠 @Airdropbots2\n💠 @Technicafundaa\n💠 @SharpLoots\n💠 @looter_money1\n💠 @AirdropDeveloper\n💠 @InstantLooters\n============================\n⛱Payment Channel -\n============================\n🔰 [Subscribe Our Payment channel](https://t.me/bot_payon)\n============================"
         for i in CHANNELS:
             msg_start += f"\n"
         msg_start += "*"
@@ -98,8 +98,8 @@ def start(message):
         markups = telebot.types.InlineKeyboardMarkup()
         markups.add(telebot.types.InlineKeyboardButton(
             text='📌 Joined', callback_data='check'))
-        msg_start = "*⛔ Must Join All Our Channel\n============================\n💠@Genuines_airdrops\n💠 @armylooterz2\n💠 @AirdropNext_Level\n💠 @cryptoHunterz9\n💠 @Airdropo_o\n💠 @airdropsuperme\n💠@GeniusGiveway\n============================\n🅿️ayout Channel - @EFM_Payout*"
-        bot.send_message(user, msg_start,
+        msg_start = "*⛔ Must Join All Our Channel\n============================\n💠 @flex_airdrop\n💠 @flex_airdrop_discussion\n💠 @Meta_fireofficial\n💠 @Bsc_Cryptos\n💠 @Crazy_Shirsh\n💠 @airdropo_o\n💠 @prolooteress\n💠 @Airdropbots2\n💠 @Technicafundaa\n💠 @SharpLoots\n💠 @looter_money1\n💠 @AirdropDeveloper\n💠 @InstantLooters\n============================\n⛱Payment Channel -\n============================\n🔰 [Subscribe Our Payment channel](https://t.me/bot_payon)\n============================"
+   bot.send_message(user, msg_start,
                          parse_mode="Markdown", reply_markup=markups)
    except:
         bot.send_message(message.chat.id, "This command having error pls wait for ficing the glitch by admin")
@@ -154,8 +154,8 @@ def query_handler(call):
             markup = telebot.types.InlineKeyboardMarkup()
             markup.add(telebot.types.InlineKeyboardButton(
                 text='📌 Joined', callback_data='check'))
-            msg_start = "*⛔ Must Join All Our Channel\n============================\n💠@Genuines_airdrops\n💠 @armylooterz2\n💠 @AirdropNext_Level\n💠 @cryptoHunterz9\n💠 @Airdropo_o\n💠 @airdropsuperme\n💠@GeniusGiveway\n============================\n🅿️ayout Channel - @EFM_Payout*"
-            bot.send_message(call.message.chat.id, msg_start,
+            msg_start ="*⛔ Must Join All Our Channel\n============================\n💠 @flex_airdrop\n💠 @flex_airdrop_discussion\n💠 @Meta_fireofficial\n💠 @Bsc_Cryptos\n💠 @Crazy_Shirsh\n💠 @airdropo_o\n💠 @prolooteress\n💠 @Airdropbots2\n💠 @Technicafundaa\n💠 @SharpLoots\n💠 @looter_money1\n💠 @AirdropDeveloper\n💠 @InstantLooters\n============================\n⛱Payment Channel -\n============================\n🔰 [Subscribe Our Payment channel](https://t.me/bot_payon)\n============================"
+             bot.send_message(call.message.chat.id, msg_start,
                              parse_mode="Markdown", reply_markup=markup)
    except:
         bot.send_message(call.message.chat.id, "This command having error pls wait for ficing the glitch by admin")
