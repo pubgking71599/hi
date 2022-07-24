@@ -5,7 +5,7 @@ import telebot
 ##TOKEN DETAILS
 TOKEN = "DGB"
 
-BOT_TOKEN = "5512364402:AAEtLyHrwUxPDy9xGx80MsuGOZxpvOeyB3g"
+BOT_TOKEN = "5359161921:AAF5p2vCbMqY7z0eDAslGST73yfIzhORbrE"
 PAYMENT_CHANNEL = "@bot_payon" #add payment channel here including the '@' sign
 OWNER_ID = 868205118 #write owner's user id here.. get it from @MissRose_Bot by /id
 CHANNELS = [ "@meta_fireofficial" ] #add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
