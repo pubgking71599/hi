@@ -3,16 +3,16 @@ import json
 import telebot
 
 ##TOKEN DETAILS
-TOKEN = "TRON"
+TOKEN = "DGB"
 
 BOT_TOKEN = "5359161921:AAF5p2vCbMqY7z0eDAslGST73yfIzhORbrE"
-PAYMENT_CHANNEL = "@PAYMENTCHANNELUSERNAME" #add payment channel here including the '@' sign
+PAYMENT_CHANNEL = "@PaymentHub21" #add payment channel here including the '@' sign
 OWNER_ID = 868205118 #write owner's user id here.. get it from @MissRose_Bot by /id
-CHANNELS = ["@CHECKCHANNEL"] #add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
+CHANNELS = ["@Airdropo_oS","@PaymentHub21","@Avengers_Airdropser","@Golden_Affiliate"] #add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
               #you can add as many channels here and also add the '@' sign before channel username
-Daily_bonus = 0.001 #Put daily bonus amount here!
-Mini_Withdraw = 0.5  #remove 0 and add the minimum withdraw u want to set
-Per_Refer = 0.0001 #add per refer bonus here
+Daily_bonus = 0.00 #Put daily bonus amount here!
+Mini_Withdraw = 1  #remove 0 and add the minimum withdraw u want to set
+Per_Refer = 0.2 #add per refer bonus here
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
@@ -98,7 +98,7 @@ def start(message):
         markups = telebot.types.InlineKeyboardMarkup()
         markups.add(telebot.types.InlineKeyboardButton(
             text='🤼‍♂️ Joined', callback_data='check'))
-        msg_start = "*🍔 To Use This Bot You Need To Join This Channel - \n➡️ @ Fill your channels at line: 101 and 157*"
+        msg_start = "*🔎 Join Our All Channels:\n➖➖➖➖➖➖➖➖➖➖➖ @Airdropo_oS\n @Avengers_Airdropser\n @Golden_Affiliate\n @ATTITUDEARNERS\n @verifiedairdrop109\n @OrganicAirdrop\n @airdropsmonster_1\n @MetaFLOKISOFFICIAL\n @Looter_money1\n @redeemcodefreeankit\n @airdropwheel02\n @Airdrop_dragons\n @someonespecua\n @AirdropBranch15\n @St_Airdrop\n @FaithAirdrop\n @bsc_cryptos\n @InstantLooters\n➖➖➖➖➖➖➖➖➖➖➖\n🅿️ Payment channel - @PaymentHub21 \n➖➖➖➖➖➖➖➖➖➖➖\n🛃 Before Using  Bot, you have to start the below Bot👇👇👇!*"
         bot.send_message(user, msg_start,
                          parse_mode="Markdown", reply_markup=markups)
    except:
@@ -116,7 +116,7 @@ def query_handler(call):
             user_id = call.message.chat.id
             user = str(user_id)
             bot.answer_callback_query(
-                callback_query_id=call.id, text='✅ You joined Now yu can earn money')
+                callback_query_id=call.id, text='✅ You joined Now you can earn money')
             bot.delete_message(call.message.chat.id, call.message.message_id)
             if user not in data['refer']:
                 data['refer'][user] = True
@@ -154,7 +154,7 @@ def query_handler(call):
             markup = telebot.types.InlineKeyboardMarkup()
             markup.add(telebot.types.InlineKeyboardButton(
                 text='🤼‍♂️ Joined', callback_data='check'))
-            msg_start = "*🍔 To Use This Bot You Need To Join This Channel - \n➡️ @ Fill your channels at line: 101 and 157*"
+            msg_start = "*🔎 Join Our All Channels:\n➖➖➖➖➖➖➖➖➖➖➖ @Airdropo_oS\n @Avengers_Airdropser\n @Golden_Affiliate\n @ATTITUDEARNERS\n @verifiedairdrop109\n @OrganicAirdrop\n @airdropsmonster_1\n @MetaFLOKISOFFICIAL\n @Looter_money1\n @redeemcodefreeankit\n @airdropwheel02\n @Airdrop_dragons\n @someonespecua\n @AirdropBranch15\n @St_Airdrop\n @FaithAirdrop\n @bsc_cryptos\n @InstantLooters\n➖➖➖➖➖➖➖➖➖➖➖\n🅿️ Payment channel - @PaymentHub21 \n➖➖➖➖➖➖➖➖➖➖➖\n🛃 Before Using  Bot, you have to start the below Bot👇👇👇!*"
             bot.send_message(call.message.chat.id, msg_start,
                              parse_mode="Markdown", reply_markup=markup)
    except:
