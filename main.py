@@ -183,7 +183,7 @@ def send_text(message):
         msg = accmsg.format(message.from_user.first_name,
                             wallet, balance, TOKEN)
         bot.send_message(message.chat.id, msg, parse_mode="Markdown")
-  if message.text == 'Broad':
+
 
     if message.text == '🙌🏻 Referrals':
         data = json.load(open('users.json', 'r'))
