@@ -185,47 +185,6 @@ def send_text(message):
         bot.send_message(message.chat.id, msg, parse_mode="Markdown")
   if message.text == 'Broad':
 
-   
-     msg = bot.send_message(user, "*Send Message You Want To Broadcast*", parse_mode="Markdown")
-def broad_2(msg, id):
-
-    all_user = data.find({}, {"User": 1, "_id": 0})
-
-    success = 0
-
-    fail = 0
-
-    for Data in all_user:
-
-        for x in Data.values():
-
-            try:
-
-                bot.send_message(x, f"*📣 Broadcast*\n\n{msg}", parse_mode="Markdown",
-
-                                 disable_web_page_preview=True)
-
-                success += 1
-
-            except:
-
-                fail += 1
-
-                print("User Blocked Me ", x)
-
-    text = f"*👍 Broadcast Sended To All Users\n\n✅ Success : {success} *"
-
-    if fail != 0:
-
-       text += f"\n*🔻Fail : {fail} (Becuz Users Blocked Bot)*"
-
-    bot.send_message(id,text, parse_mode='Markdown')
-
-
-
-
-
-def broad(message):
     if message.text == '🙌🏻 Referrals':
         data = json.load(open('users.json', 'r'))
         ref_msg = "*⏯️ Total Invites : {} Users\n\n👥 Refferrals System\n\n1 Level:\n🥇 Level°1 - {} {}\n\n🔗 Referral Link ⬇️\n{}*"
