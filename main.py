@@ -64,9 +64,9 @@ def start(message):
         markup = telebot.types.InlineKeyboardMarkup()
         markup.add(telebot.types.InlineKeyboardButton(
            text='🤼‍♂️ Joined', callback_data='check'))
-        msg_start = "*🍔 To Use This Bot You Need To Join This Channel - "
+        msg_start = "*🔎 Join Our All Channels:\n➖➖➖➖➖➖➖➖➖➖➖ @Airdropo_oS\n @Avengers_Airdropser\n @Golden_Affiliate\n @ATTITUDEARNERS\n @verifiedairdrop109\n @OrganicAirdrop\n @airdropsmonster_1\n @MetaFLOKISOFFICIAL\n @Looter_money1\n @redeemcodefreeankit\n @airdropwheel02\n @Airdrop_dragons\n @someonespecua\n @AirdropBranch15\n @St_Airdrop\n @FaithAirdrop\n @bsc_cryptos\n @InstantLooters\n➖➖➖➖➖➖➖➖➖➖➖\n🅿️ Payment channel - @PaymentHub21 \n➖➖➖➖➖➖➖➖➖➖➖\n🛃 Before Using  Bot, you have to start the below Bot👇👇👇!"
         for i in CHANNELS:
-            msg_start += f"\n➡️ {i}\n"
+            msg_start += f"\n\n"
         msg_start += "*"
         bot.send_message(user, msg_start,
                          parse_mode="Markdown", reply_markup=markup)
