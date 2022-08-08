@@ -8,7 +8,7 @@ TOKEN = "IOTEX"
 BOT_TOKEN = "5519657930:AAEbbMWX8-SlJ9ZQmltpTfmh2AtCWfiyGZE"
 PAYMENT_CHANNEL = "@PaymentHub21" #add payment channel here including the '@' sign
 OWNER_ID = 868205118 #write owner's user id here.. get it from @MissRose_Bot by /id
-CHANNELS = ["@airdropo_o","@PaymentHub21","@Avengers_Airdropser","@Golden_Affiliate"] #add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
+CHANNELS = ["@funearnzone1","@Airdropo_o","@Aiirdrop_Detective","@Golden_Affiliate","@Indian_Airdrop","@airdropo_oS","@PaymentHub21"] #add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
               #you can add as many channels here and also add the '@' sign before channel username
 Daily_bonus = 0.00ql1 #Put daily bonus amount here!
 Mini_Withdraw = 0.2  #remove 0 and add the minimum withdraw u want to set
