@@ -185,8 +185,7 @@ def send_text(message):
         bot.send_message(message.chat.id, msg, parse_mode="Markdown")
 
     if message.text == '🔰 Watch to Earn':
-msg = accmsg.format(message.from_user.first_name,
-                            "*Hello*")
+msg = ("*Hello*")
 bot.send_message(message.chat.id, msg, parse_mode="Markdown")
 
     if message.text == '🙌🏻 Referrals':
