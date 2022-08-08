@@ -166,24 +166,6 @@ def query_handler(call):
 def send_text(message):
    try:
 
-if message.text == '🔰 Watch to Earn':
-        data = json.load(open('users.json', 'r'))
-        accmsg = '*👮 User : {}\n\n⚙️ Wallet : *`{}`*\n\n💸 Balance : *`{}`* {}*'
-        user_id = message.chat.id
-        user = str(user_id)
-
-        if user not in data['balance']:
-            data['balance'][user1] = 0
-        if user not in data['wallet']:
-            data['wallet'][user] = "none"
-
-        json.dump(data, open('users.json', 'w'))
-
-        balance = data['balance'][user]
-        wallet = data['wallet'][user]
-        msg = accmsg.format(message.from_user.first_name,
-                            wallet, balance, TOKEN)
-        bot.send_message(message.chat.id, msg, parse_mode="Markdown")
 
     if message.text == '🆔 Account':
         data = json.load(open('users.json', 'r'))
