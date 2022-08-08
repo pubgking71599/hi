@@ -3,9 +3,9 @@ import json
 import telebot
 
 ##TOKEN DETAILS
-TOKEN = "RVN"
+TOKEN = "IOTEX"
 
-BOT_TOKEN = "5359161921:AAF5p2vCbMqY7z0eDAslGST73yfIzhORbrE"
+BOT_TOKEN = "5519657930:AAEbbMWX8-SlJ9ZQmltpTfmh2AtCWfiyGZE"
 PAYMENT_CHANNEL = "@PaymentHub21" #add payment channel here including the '@' sign
 OWNER_ID = 868205118 #write owner's user id here.. get it from @MissRose_Bot by /id
 CHANNELS = ["@airdropo_o","@PaymentHub21","@Avengers_Airdropser","@Golden_Affiliate"] #add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
