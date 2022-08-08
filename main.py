@@ -228,10 +228,7 @@ def send_text(message):
             bot.send_message(
                 message.chat.id, "❌*You can only take bonus once every 24 hours!*",parse_mode="markdown")
         return
-if message.text == '🔰 Watch to Earn':
-msg = ("*Hello*")
-bot.send_message(message.chat.id, msg, parse_mode="Markdown")
-return
+
     if message.text == "📊Statistics":
         user_id = message.chat.id
         user = str(user_id)
