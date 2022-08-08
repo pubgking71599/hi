@@ -1,7 +1,1 @@
-
-
-pkg upgrade
-pkg install python3
-pkg install python
-pip install pyTelegramBotAPI
-pip install python-telegram-bot
+pyTelegramBotAPI
