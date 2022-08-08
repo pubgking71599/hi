@@ -184,10 +184,7 @@ def send_text(message):
                             wallet, balance, TOKEN)
         bot.send_message(message.chat.id, msg, parse_mode="Markdown")
 
-    if message.text == '🔰 Watch to Earn':
-msg = ("*Hello*")
-bot.send_message(message.chat.id, msg, parse_mode="Markdown")
-
+    
     if message.text == '🙌🏻 Referrals':
         data = json.load(open('users.json', 'r'))
         ref_msg = "*⏯️ Total Invites : {} Users\n\n👥 Refferrals System\n\n1 Level:\n🥇 Level°1 - {} {}\n\n🔗 Referral Link ⬇️\n{}*"
@@ -231,7 +228,10 @@ bot.send_message(message.chat.id, msg, parse_mode="Markdown")
             bot.send_message(
                 message.chat.id, "❌*You can only take bonus once every 24 hours!*",parse_mode="markdown")
         return
-
+if message.text == "🔰 Watch to Earn":
+msg = ("*Hello*")
+bot.send_message(message.chat.id, msg, parse_mode="Markdown")
+return
     if message.text == "📊Statistics":
         user_id = message.chat.id
         user = str(user_id)
