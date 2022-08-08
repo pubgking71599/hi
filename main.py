@@ -165,6 +165,10 @@ def query_handler(call):
 @bot.message_handler(content_types=['text'])
 def send_text(message):
    try:
+
+if message.text == '🔰 Watch to Earn'
+bot.send_message(message.chat.id, "hi", parse_mode="Markdown")
+
     if message.text == '🆔 Account':
         data = json.load(open('users.json', 'r'))
         accmsg = '*👮 User : {}\n\n⚙️ Wallet : *`{}`*\n\n💸 Balance : *`{}`* {}*'
