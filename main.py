@@ -12,7 +12,7 @@ CHANNELS = ["@funearnzone1","@Airdropo_o","@Golden_Affiliate","@Indian_Airdrop",
               #you can add as many channels here and also add the '@' sign before channel username
 Daily_bonus = 0.001 #Put daily bonus amount here!
 Mini_Withdraw = 0.2  #remove 0 and add the minimum withdraw u want to set
-Per_Refer = 0.05 #add per refer bonus here
+Per_Refer = 5 #add per refer bonus here
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
