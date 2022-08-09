@@ -308,10 +308,6 @@ def amo_with(message):
     bal = data['balance'][user]
     wall = data['wallet'][user]
     msg = message.text
-    if msg.isdigit() == False:
-        bot.send_message(
-            user_id, "_📛 Invaild value. Enter only numeric value. Try again_", parse_mode="Markdown")
-        return
     if int(message.text) < Mini_Withdraw:
         bot.send_message(
             user_id, f"_❌ Minimum withdraw {Mini_Withdraw} {TOKEN}_", parse_mode="Markdown")
